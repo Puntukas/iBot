@@ -2,7 +2,7 @@ var isIBotRunning;
 
 if(!isIBotRunning) {
 	// Name and Version
-	var NAME = "iBot";
+	var NAME = "e-sim_bot";
 	var VERSION = "v1.0.0";
 
 	// Plug.DJ Ported API for Dubtrack.FM
@@ -80,7 +80,7 @@ if(!isIBotRunning) {
 	
 		if(msg.startsWith("!")) {
 			if(msg === "!help") {
-				API.sendChat(IBot.iBot + " user commands: help, cookie @{User}, dj, song, list, autodubup");
+				API.sendChat(IBot.iBot + " user commands: help, cookie @{User}, dj, song, list, dubx");
 			}
 			if(msg.startsWith("!cookie")) {
 				var UN = msg.substring(9);
@@ -103,14 +103,10 @@ if(!isIBotRunning) {
 			if(msg === "!list") {
 				API.sendChat("Users 'found': " + IBot.Tools.getUsers());
 			}
-			if(msg === "!autodubup") {
-				API.sendChat("Recommended Dubtrack.FM Extensions: iWoot (same creator as me, iBot), MikuPlugin (made by @rubychan), and/or DubX (made by multiple developers)");
+			if(msg === "!dubx") {
+				API.sendChat("Recommended Dubtrack.FM Extensions: DubX https://dubx.net");
 			}
 		}
-	}
-
-	function nextSongMsg() {
-		API.sendChat(":musical_note: Now playing: " + API.getMedia() + "! DJ: " + API.getDJ() + ":musical_note:");
 	}
 
 	function connectAPI() {
