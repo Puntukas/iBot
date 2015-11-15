@@ -113,7 +113,6 @@ if(!isIBotRunning) {
 		API.on(API.CHAT, commandHandler);
 		API.on(API.USER_JOIN, userJoinMsg);
 		API.on(API.USER_LEAVE, userLeaveMsg);
-		API.on(API.ADVANCE, nextSongMsg);
 	}
 
 	// Just like iWoot, CONNECT EVERYTHING!
